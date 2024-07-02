@@ -1,0 +1,36 @@
+*, ::after, ::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+body, html {
+    font-size: 16px;
+    font-family: 'Poppins',sans-serif;
+    background: linear-gradient(135deg, #b53b061e, #36006b00);
+    height: 100vh;
+}
+
+.app {
+    width: 100%;
+    max-width: 900px;
+    padding: 40px 30px 70px;
+    margin: 100px auto 50px;
+    border-radius: 10px ;
+    background: #ffffff;
+    text-align: center;
+}
+  
+.app h1,h2 {
+    color: #002765;
+    font-size: 25px;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+
+#search-input{
+    background-color: rgb(12, 215, 246);
+    font-size: 25px;
+  
+}
