@@ -50,8 +50,10 @@ async function displayFavorites() {
         const bookDiv = document.createElement('div');
         bookDiv.className = 'book';
         bookDiv.innerHTML = `
+            <img src="${book.volumeInfo.imageLinks?.thumbnail}" alt="${book.volumeInfo.title}">
             <h3>${book.volumeInfo.title}</h3>
-            <p>${book.volumeInfo.authors?.join(', ')}</p>
+            <p>Authors: ${book.volumeInfo.authors?.join(', ')}</p>
+            <p>Publisher: ${book.volumeInfo.publishedDate}</p>
             <button onclick="removeFromFavorites('${bookId}')">Supprimer de mes favorites</button>
         `;
         favoritesDiv.appendChild(bookDiv);
