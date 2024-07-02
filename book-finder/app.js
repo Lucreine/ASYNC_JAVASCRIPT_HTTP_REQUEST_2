@@ -15,9 +15,11 @@ function displayResults(books) {
         const bookDiv = document.createElement('div');
         bookDiv.className = 'book';
         bookDiv.innerHTML = `
+            <img src="${book.volumeInfo.imageLinks?.thumbnail}" alt="${book.volumeInfo.title}">
             <h3>${book.volumeInfo.title}</h3>
-            <p>${book.volumeInfo.authors?.join(', ')}</p>
-            <button onclick="addToFavorites('${book.id}')">Add to Favorites</button>
+            <p>Authors: ${book.volumeInfo.authors?.join(', ')}</p>
+            <p>Publisher: ${book.volumeInfo.publishedDate}</p>
+            <button onclick="addToFavorites('${book.id}')">Ajouter aux favorites</button>
         `;
         resultsDiv.appendChild(bookDiv);
     });
@@ -50,7 +52,7 @@ async function displayFavorites() {
         bookDiv.innerHTML = `
             <h3>${book.volumeInfo.title}</h3>
             <p>${book.volumeInfo.authors?.join(', ')}</p>
-            <button onclick="removeFromFavorites('${bookId}')">Remove from Favorites</button>
+            <button onclick="removeFromFavorites('${bookId}')">Supprimer de mes favorites</button>
         `;
         favoritesDiv.appendChild(bookDiv);
     }
